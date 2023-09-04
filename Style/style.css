@@ -7,8 +7,8 @@
 /*Include Raleway Font*/
 @font-face {
   font-family: Raleway;
-  src: url('../Assest/Font/Raleway/Raleway-VariableFont_wght.ttf'),
-       url('../Assest/Font/Raleway/Raleway-VariableFont_wght.ttf');
+  src:url('../Assest/Font/Raleway/Raleway-VariableFont_wght.ttf'),
+      url('../Assest/Font/Raleway/Raleway-VariableFont_wght.ttf');
 }
 /* End Include Raleway Font*/
 body{
@@ -53,24 +53,22 @@ header nav .leftNav .ImageLogo img{
   width: 200px;
   height:auto ;
   overflow: hidden;
-  border-right: 1px solid white ;
+  
   animation:text 3.8s ease-in-out infinite;
 }
 @keyframes text{
   0%   {
     width: 0px;
-    border-right: 1px solid white ;
   }
   25%  {
     width: 199px;
-    border-right: 1px solid white;
+
   }
   50%  {
     width: 200px;
   }
   100% {
     opacity: 0;
-    border-right: 1px solid black;
   }
 }
 header nav .RightNav{
