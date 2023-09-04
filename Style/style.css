@@ -16,9 +16,55 @@
   align-items: center;
 }
 /* End Include Raleway Font*/
-body{
-  background-color: #1B1B1B;
+/*Start Images Background Style*/
+#backgroundColor{
+  position: fixed;
+  width: 100%;
+  height: 150vh;
+  z-index: -1;
+  top:-30px;
+  background: url('../Images/background.jpg'), lightgray 50% / contain no-repeat; 
 }
+#backgroundWaveTop{
+  background: url('../Images/backgroundWaveTop.png');
+  opacity: 0.7;
+  position: fixed;
+  z-index: 18;
+  top: 57px;
+  right: 0;
+  width: 88%;
+  height: 213vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translate3d(431px,-50px, 0);
+  transition: all 1s ease-in-out;
+}
+#backgroundWaveBottom{
+  opacity: 0.7;
+  position: fixed;
+  z-index: 18;
+  top: 64px;
+  right: 0;
+  width: 100%;
+  height: 93vh;
+  transform: translate(80px, 505px);
+  transition: all 1s ease-in-out;
+}
+#backgroundWaveBottomLeft{
+  opacity: 0.7;
+  position: fixed;
+  z-index: 18;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  height: 93vh;
+  transform: translate(-700px, 182px);
+  transition: all 1s ease-in-out;
+}
+.ActiveBack{
+  transform: translate(0px, 0px) !important;
+}
+/*End Images Background Style*/
 a{
   text-decoration: none;
   color: white;
@@ -28,8 +74,17 @@ a:hover{
 }
 /*=======> start Style header <==========*/
 header{
+  position: fixed;
+  width: 100%;
+  z-index: 100;
   background-color: #1B1B1B;
   box-shadow: 0px 4px 17px 8px rgba(0, 0, 0, 0.69);
+  transform: translateY(-50px);
+  transition: all 0.8s ease-in-out;
+}
+.ActiveHeader{
+  transform: translateY(-0px);
+
 }
 header nav{
   padding-left:10px !important;
@@ -51,10 +106,10 @@ header nav .leftNav .TextAnimation svg{
 }
 header nav .leftNav .TextAnimation .inner{
   position: absolute;
-  width: 200px;
+  width: 0px;
   height:auto ;
   overflow: hidden;
-  animation:text 3.8s ease-in-out infinite;
+  animation:text 3.8s 1.3s ease-in-out infinite;
 }
 @keyframes text{
   0%   {
@@ -121,7 +176,6 @@ header nav .RightNav ul li a p{
   right: 0px;
   text-align: center;
   background-color: #3D3D3D;
-  /* padding: 5px; */
   width: 35px;
   height: 35px;
   border-radius: 50%;
