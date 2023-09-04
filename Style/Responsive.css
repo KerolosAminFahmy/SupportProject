@@ -1,0 +1,19 @@
+@media screen and (max-width:1220px ) {
+  .LineBetText{
+    width: 50% !important;
+  }
+}
+@media screen and (max-width:750px ) {
+  .LineBetText{
+    width: 50% !important;
+  }
+  .container{
+    width: 99% !important;
+    max-width: 100% !important;
+    margin-left:5px !important;
+    margin-right:5px !important;
+  }
+  nav{
+    justify-content: center !important;
+  }
+}
