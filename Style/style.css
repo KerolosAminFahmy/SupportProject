@@ -10,6 +10,11 @@
   src:url('../Assest/Font/Raleway/Raleway-VariableFont_wght.ttf'),
       url('../Assest/Font/Raleway/Raleway-VariableFont_wght.ttf');
 }
+.centerFlex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 /* End Include Raleway Font*/
 body{
   background-color: #1B1B1B;
@@ -21,6 +26,7 @@ a{
 a:hover{
   color:white;
 }
+/*=======> start Style header <==========*/
 header{
   background-color: #1B1B1B;
   box-shadow: 0px 4px 17px 8px rgba(0, 0, 0, 0.69);
@@ -29,26 +35,21 @@ header nav{
   padding-left:10px !important;
   padding-right:10px;
 }
-header nav .leftNav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 header nav .leftNav .ImageLogo img{
   width: 40px;
   height: 40px;
   margin-right: 10px;
 }
 /* ======>Start Text Animation Style<=========  */
-.TextAnimation{
+header nav .leftNav .TextAnimation{
   width: fit-content;
   position: relative;
 }
-.TextAnimation svg{
+header nav .leftNav .TextAnimation svg{
   width: 200px;
   height: auto;
 }
-.inner{
+header nav .leftNav .TextAnimation .inner{
   position: absolute;
   width: 200px;
   height:auto ;
@@ -70,16 +71,8 @@ header nav .leftNav .ImageLogo img{
     opacity: 0;
   }
 }
-header nav .RightNav{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 /* ======>End Text Animation Style<=========  */
 header nav .RightNav ul{
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin-bottom: 0px;
 }
 header nav .RightNav ul li{
@@ -103,7 +96,7 @@ header nav .RightNav ul li a p{
   font-size: 15px;
   font-style: normal;
   font-weight: 800;
-  line-height: 23px; /* 76.667% */
+  line-height: 23px;
   text-transform: capitalize;
 }
 
@@ -116,17 +109,13 @@ header nav .RightNav ul li a p{
 }
 .SearchBar input{
   border-radius: 25px;
-    padding: 5px 12px;
-
-    padding-right: 24px;
-    width: 0px;
-    opacity: 0;
-    transition: all 0.5s linear;
+  padding: 5px 12px;
+  padding-right: 24px;
+  width: 0px;
+  opacity: 0;
+  transition: all 0.5s linear;
 }
 .SearchBar .iconSearch{
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: absolute;
   top:1px;
   right: 0px;
@@ -149,3 +138,4 @@ header nav .RightNav ul li a p{
   line-height: 23px; /* 76.667% */
   text-transform: capitalize;
 }
+/*=======> End Style header <==========*/
