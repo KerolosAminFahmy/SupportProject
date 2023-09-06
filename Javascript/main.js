@@ -179,16 +179,14 @@ function updateHeightDiv(){
   document.querySelector(".SectionKero").style.height=`${divHeight+30}px`;
 }
 /* End Resize Section Because Postion Absolute  */
-
-window.onbeforeunload = function(e) {
-  e.preventDefault();
- 
-};
-
+/* Animation Exit From Page */
 var alllinks = document.querySelectorAll("a");
 alllinks.forEach((item)=>{
   item.addEventListener("click",(e)=>{
     e.preventDefault();
+    if(item.getAttribute('href')==''){
+      return;
+    }
     header.classList.remove("ActiveHeader");
     BackgroundWaveTop.classList.remove("ActiveBack");
     BackgroundWaveBottom.classList.remove("ActiveBack");
@@ -197,4 +195,13 @@ alllinks.forEach((item)=>{
       window.location.href = item.getAttribute('href');
   }, 800);
   })
+})
+/* End Animation Exit */
+
+/* Display Committe In support */
+var ButtonCommite=document.querySelector(".committee");
+var CommitteeSection=document.querySelector(".CommitteeSection")
+ButtonCommite.addEventListener("click",()=>{
+  CommitteeSection.classList.toggle("CommitteeActive")
+
 })

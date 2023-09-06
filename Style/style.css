@@ -121,6 +121,49 @@ header nav .leftNav .ImageLogo img{
   height: 40px;
   margin-right: 10px;
 }
+/**/
+header .CommitteeSection{
+  width: 100%;
+    position: absolute;
+    bottom:-54px;
+    border-radius: 10px;
+    background: rgba(54, 54, 54, 0.64);
+    box-shadow: 0px 21px 17px -8px rgba(0, 0, 0, 0.69);
+    margin: 0 auto;
+    transform: translateX(100%);
+    transition: all 0.6s ease-in-out;
+  }
+  .CommitteeActive{
+    transform: translateX(0) !important;
+  }
+  header .CommitteeSection ul{
+    width: 90%;
+    margin: 0 auto;
+    padding:8px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header .CommitteeSection ul li {
+    text-align: center;
+    width: min-content;
+    border-radius: 5px;
+    padding:5px 20px ;
+    cursor: pointer;
+    background: rgba(27, 27, 27, 0.78);
+  }
+  header .CommitteeSection ul li p{
+    color: #FFF;
+    text-align: center;
+    font-family: 'Raleway';
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 23px;
+    text-transform: capitalize;
+    margin: 0;
+  }
+/**/
 /* ======>Start Text Animation Style<=========  */
 header nav .leftNav .TextAnimation{
   width: fit-content;
