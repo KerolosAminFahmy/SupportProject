@@ -26,10 +26,62 @@
     justify-content: center !important;
   }
 } */
-@media screen and (max-width:600px) {
-  section{
-    width: 98% !important;
+@media (max-width:600px) {
+  .SectionKero{
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
+  .TextChange:nth-child(1){
+    padding:0 0 0 45px !important;
+  } 
+  .TextChange:nth-child(2){
+    padding:0 45px 0 0px !important;
+  } 
+  .activeAnton {
+    right: -45px !important;
+  }
+  .MarkLine .smallLine{
+    width: 20px !important;
+    
+  }
+  .MarkLine .circle{
+    left: 20px !important ;
+  }
+  .activeAnton .smallLine{
+    width:60px !important;
+  }
+  .activeAnton .circle{
+    left: 60px !important;
+  }
+}
+@media (max-width :550px) {
+  .TopCard{
+    flex-direction: column;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  .TopCard .ImageCard{
+    width: 90% !important;
+    margin-bottom: 15px;
+  }
+  .TopCard .textCard{
+    width: 95%;
+  }
+}
+@media (max-width:380px) {
+
+}
+@media (min-width:995px) and (max-width:1226px){
+  .textCard{
+    width: min-content !important;
+  }
+}
+@media (min-width: 576px){
+  .SectionKero{
+    max-width: 95% !important;
+  }
+}
+@media screen and (max-width:600px) {
   section  .ContainerText .TextChange{
     font-size: 15px !important;
     padding-left: 20px !important;
@@ -37,5 +89,14 @@
   }
   section .ContainerText .ActiveText{
     font-size: 30px !important;
+  }
+}
+@media (max-width:991px) {
+  .Description{
+    border-radius: 0px 0px 13px 13px !important;
+    padding-bottom: 35px !important;
+  }
+  .Description .button button{
+    bottom:15px !important;
   }
 }
