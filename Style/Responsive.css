@@ -1,6 +1,15 @@
-@media screen and (max-width:1220px ) {
+/* @media screen and (max-width:1220px ) {
   .LineBetText{
     width: 50% !important;
+  }
+  
+}
+@media screen and (max-width:990px ) {
+  .activeAnton{
+    right: -45px;
+  }
+  nav{
+    justify-content: center !important;
   }
 }
 @media screen and (max-width:750px ) {
@@ -9,11 +18,24 @@
   }
   .container{
     width: 99% !important;
-    max-width: 100% !important;
+    max-width: 99% !important;
     margin-left:5px !important;
     margin-right:5px !important;
   }
   nav{
     justify-content: center !important;
+  }
+} */
+@media screen and (max-width:600px) {
+  section{
+    width: 98% !important;
+  }
+  section  .ContainerText .TextChange{
+    font-size: 15px !important;
+    padding-left: 20px !important;
+    padding-right: 30px  !important;
+  }
+  section .ContainerText .ActiveText{
+    font-size: 30px !important;
   }
 }

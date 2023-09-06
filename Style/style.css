@@ -220,20 +220,20 @@ header nav .RightNav ul li a p{
 }
 /*=======> End Style header <==========*/
 /* Start Section Home */
-section{
+.SectionKero{
   position: relative;
   width: 90%;
   margin: 140px auto 0;
   height: 100vh;
 }
-section .MarkLine{
+section.SectionKero .MarkLine{
   position: relative;
   top: -10px;
   height: inherit;
   transform: rotateY(0);
   transition: all 0.5s ease-in-out;
 }
-section .MarkLine .line{
+section.SectionKero .MarkLine .line{
   height: inherit;
   width: 2px;
   background-color: #F5B819;
@@ -241,7 +241,7 @@ section .MarkLine .line{
   left: 0;
   top:0;
 }
-section .MarkLine .smallLine{
+section.SectionKero .MarkLine .smallLine{
   height: 2px;
   width: 40px;
   background-color: #F5B819;
@@ -249,7 +249,7 @@ section .MarkLine .smallLine{
   left: 0;
   top:0;
 }
-section .MarkLine .circle{
+section.SectionKero .MarkLine .circle{
   position: absolute;
   height: 10px;
   width: 10px;
@@ -260,24 +260,27 @@ section .MarkLine .circle{
 }
 .activeAnton{
   transform: rotateY(180deg) !important;
+  right: -20px;
 }
-section .ContainerText{
+section.SectionKero .ContainerText{
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
   padding: 0 20px; 
 }
-section .ContainerText .LineBetText{
+section.SectionKero .ContainerText .LineBetText{
   height: 3px;
   width: 70%;
   background-color: #F5B819;
 }
-section  .ContainerText .TextChange{
+section.SectionKero  .ContainerText .TextChange{
   position: relative;
   z-index: 18;
   color: #FFF;
-  width: 10%;
+  width: fit-content;
+  padding-left: 45px;
+  padding-right: 30px;
   text-align: center;
   font-family: Raleway;
   font-size: 20px;
@@ -287,8 +290,142 @@ section  .ContainerText .TextChange{
   text-transform: capitalize;
   transition: all 0.5s ease-in-out;
 }
-section .ContainerText .ActiveText{
+section.SectionKero .ContainerText .ActiveText{
   color: #F5B819;
   font-size: 50px;
-  width: 15%;
+}
+
+.cards{
+  position: absolute;
+  top: 50px;
+  left: 60px;
+  width: 99%;
+  display: flex;
+}
+.cardChild{
+  border-radius: 10px;
+  background: linear-gradient(319deg, rgba(0, 0, 0, 0.00) 0%, rgba(245, 184, 25, 0.56) 100%);
+  box-shadow: 6px 11px 9px 9px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  padding :20px 10px;
+  overflow: hidden;
+}
+.TopCard{
+  display: flex;
+  justify-content: space-between;
+}
+.ImageCard{
+  width: 50%;
+}
+.ImageCard img{
+  width: 100%;
+}
+.textCard{
+  width: 45%;
+}
+.textCard p{
+  color: #FFF;
+  text-align: center;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: Raleway;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 23px;
+  text-transform: capitalize;
+}
+.bottomCard{
+  padding:10px;
+  border-radius: 10px;
+  background: #D9D9D9;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.bottomCard .headerInfo h3{
+  color: rgba(0, 0, 0, 0.57);
+  font-family: Raleway;
+  font-size: 23px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 23px;
+  text-transform: capitalize;
+}
+.bottomCard .button{
+  width: 98%;
+  display: flex;
+  justify-content: flex-end;
+}
+.bottomCard .button button,.Description .button button{
+  background: #000;
+  color: #FFF;
+  text-align: center;
+  font-family: Raleway;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 23px;
+  text-transform: capitalize;
+  border-radius: 20px;
+  padding: 0 15px;
+  transition: all 0.5s ease-in-out;
+}
+.Description .button button {
+  position: absolute;
+  bottom:30px;
+  right: 20px;
+  transform: translateX(-450px);
+  transition: all 2s ease-in-out;
+}
+.Description{
+  display: none;
+  position: relative;
+  padding:15px;
+  overflow: hidden;
+  border-radius: 0px 13px 13px 0px;
+  background: rgba(217, 217, 217, 0.60);
+  box-shadow: 15px 11px 9px 9px rgba(0, 0, 0, 0.25);
+  animation-name: OpacityAnimation;
+  animation-duration:2s ;
+  transition:all 2s ease-in-out;
+}
+.Description .headerDes h3{
+
+  color: rgba(0, 0, 0, 0.81);
+  text-align: center;
+  font-family: Raleway;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 23px;
+  text-transform: capitalize;
+
+}
+.keroCard{
+  margin-bottom: 20px;
+}
+.ActiveKeroCardRight{
+  border-top-right-radius:0px;
+  border-bottom-right-radius:0px;
+}
+.ActiveKeroCardLeft{
+  border-top-left-radius:0px;
+  border-bottom-left-radius:0px;
+}
+.ActiveButtonRight{
+  transform: translateX(150px);
+}
+.ActiveButtonLeft{
+  transform: translateX(0px) !important;
+}
+.AntonHideLeftSide{
+  opacity: 0;
+}
+@keyframes OpacityAnimation {
+  0%{
+      opacity: 0;
+      
+  }
+  100%{
+      opacity: 1;
+  }
 }
