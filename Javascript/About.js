@@ -47,3 +47,18 @@ WeAreBtn.addEventListener('click',()=>{
     VisionContainer.classList.remove("AntonHideLeftSide");
     
 })
+
+
+var alllinks = document.querySelectorAll("a");
+alllinks.forEach((item)=>{
+  item.addEventListener("click",(e)=>{
+    e.preventDefault();
+    header.classList.remove("ActiveHeader");
+    BackgroundWaveTop.classList.remove("ActiveBack");
+    BackgroundWaveBottom.classList.remove("ActiveBack");
+    BackgroundWaveBottomLeft.classList.remove("ActiveBack"); 
+    setTimeout(() => {
+      window.location.href = item.getAttribute('href');
+  }, 800);
+  })
+})

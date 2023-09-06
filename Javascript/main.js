@@ -50,8 +50,6 @@ window.onload=()=>{
 /* Start Animation Page (news , event )*/
 const textchanges=document.querySelectorAll(".TextChange");
 const MarkLine=document.querySelector(".MarkLine");
-console.log(newsContainer)
-console.log(eventsContainer)
 textchanges.forEach((item)=>{
   item.addEventListener("click",(e)=>{
     e.preventDefault()
@@ -181,3 +179,22 @@ function updateHeightDiv(){
   document.querySelector(".SectionKero").style.height=`${divHeight+30}px`;
 }
 /* End Resize Section Because Postion Absolute  */
+
+window.onbeforeunload = function(e) {
+  e.preventDefault();
+ 
+};
+
+var alllinks = document.querySelectorAll("a");
+alllinks.forEach((item)=>{
+  item.addEventListener("click",(e)=>{
+    e.preventDefault();
+    header.classList.remove("ActiveHeader");
+    BackgroundWaveTop.classList.remove("ActiveBack");
+    BackgroundWaveBottom.classList.remove("ActiveBack");
+    BackgroundWaveBottomLeft.classList.remove("ActiveBack"); 
+    setTimeout(() => {
+      window.location.href = item.getAttribute('href');
+  }, 800);
+  })
+})
