@@ -424,8 +424,8 @@ section.SectionKero .MarkLine .circle{
     border-radius: 0 13px 13px 0  !important;
 }
 .ActiveKeroCardBottom{
-  border-bottom-right-radius:0px;
-  border-bottom-left-radius:0px;
+  border-bottom-right-radius:0px !important;
+  border-bottom-left-radius:0px !important;
 }
 .ActiveButtonRight{
   transform: translateX(150px);

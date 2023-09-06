@@ -31,6 +31,7 @@ SearchInput.addEventListener("mouseout",()=>{
 /* End Aimation Search Bar */
 /* Start Intro Animation  */
 const newsContainer=document.getElementById("News");
+const eventsContainer=document.getElementById("Events");
 const header=document.querySelector("Header");
 const BackgroundWaveTop=document.getElementById("backgroundWaveTop");
 const BackgroundWaveBottom=document.getElementById("backgroundWaveBottom");
@@ -40,6 +41,8 @@ window.onload=()=>{
   BackgroundWaveTop.classList.add("ActiveBack");
   BackgroundWaveBottom.classList.add("ActiveBack");
   BackgroundWaveBottomLeft.classList.add("ActiveBack");
+  newsContainer.style.display="block";
+  eventsContainer.style.display="none";
   const divHeight = newsContainer.offsetHeight;
   document.querySelector(".SectionKero").style.height=`${divHeight+30}px`;
 }
@@ -47,7 +50,6 @@ window.onload=()=>{
 /* Start Animation Page (news , event )*/
 const textchanges=document.querySelectorAll(".TextChange");
 const MarkLine=document.querySelector(".MarkLine");
-const eventsContainer=document.getElementById("Events");
 console.log(newsContainer)
 console.log(eventsContainer)
 textchanges.forEach((item)=>{
