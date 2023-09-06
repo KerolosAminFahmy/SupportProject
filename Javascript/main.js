@@ -170,10 +170,8 @@ function updateHeightDiv(){
   var divHeight;
   if(newsContainer.style.display=="block"){
     divHeight = newsContainer.offsetHeight;
-    console.log("news "+divHeight);
   }else if(eventsContainer.style.display=="block"){
     divHeight = eventsContainer.offsetHeight;
-    console.log("events "+divHeight);
 
   }
   document.querySelector(".SectionKero").style.height=`${divHeight+30}px`;
@@ -205,3 +203,13 @@ ButtonCommite.addEventListener("click",()=>{
   CommitteeSection.classList.toggle("CommitteeActive")
 
 })
+
+// menu 
+
+var ToggleBtn = document.querySelector(".toggle-btn");
+function toggleMenu() {
+  var sideMenu = document.getElementById("sideMenu");            
+  sideMenu.classList.toggle("open");
+  ToggleBtn.classList.toggle("ActiveMenu");
+}
+

@@ -47,3 +47,28 @@ WeAreBtn.addEventListener('click',()=>{
     VisionContainer.classList.remove("AntonHideLeftSide");
     
 })
+
+
+var ToggleBtn = document.querySelector(".toggle-btn");
+function toggleMenu() {
+  var sideMenu = document.getElementById("sideMenu");            
+  sideMenu.classList.toggle("open");
+  ToggleBtn.classList.toggle("ActiveMenu");
+}
+
+var alllinks = document.querySelectorAll("a");
+alllinks.forEach((item)=>{
+  item.addEventListener("click",(e)=>{
+    e.preventDefault();
+    if(item.getAttribute('href')==''){
+      return;
+    }
+    header.classList.remove("ActiveHeader");
+    BackgroundWaveTop.classList.remove("ActiveBack");
+    BackgroundWaveBottom.classList.remove("ActiveBack");
+    BackgroundWaveBottomLeft.classList.remove("ActiveBack"); 
+    setTimeout(() => {
+      window.location.href = item.getAttribute('href');
+  }, 800);
+  })
+})
