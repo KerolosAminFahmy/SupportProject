@@ -1,19 +1,87 @@
-@media screen and (max-width:1220px ) {
-  .LineBetText{
-    width: 50% !important;
+@media (min-width:995px) and (max-width:1226px){
+  .textCard{
+    width: min-content !important;
   }
 }
-@media screen and (max-width:750px ) {
-  .LineBetText{
-    width: 50% !important;
+@media  (max-width:1290px) {
+  header .CommitteeSection ul{
+    width: 99% !important; 
   }
-  .container{
-    width: 99% !important;
-    max-width: 100% !important;
-    margin-left:5px !important;
-    margin-right:5px !important;
+  header nav .RightNav ul li{
+    margin: 0 15px !important;
   }
-  nav{
+}
+@media (max-width:991px) {
+  .Description{
+    border-radius: 0px 0px 13px 13px !important;
+    padding-bottom: 35px !important;
+  }
+  .cards{
+    left:50px !important;
+  }
+  .Description .button button{
+    bottom:15px !important;
+  }
+}
+@media (max-width:600px) {
+  .SectionKero{
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  section  .ContainerText .TextChange{
+    font-size: 15px !important;
+    padding-left: 20px !important;
+    padding-right: 30px  !important;
+  }
+  section .ContainerText .ActiveText{
+    font-size: 30px !important;
+  }
+  .TextChange:nth-child(1){
+    padding:0 0 0 45px !important;
+  } 
+  .TextChange:nth-child(2){
+    padding:0 45px 0 0px !important;
+  } 
+  .activeAnton {
+    right: -45px !important;
+  }
+  .MarkLine .smallLine{
+    width: 20px !important;
+    
+  }
+  .MarkLine .circle{
+    left: 20px !important ;
+  }
+  .activeAnton .smallLine{
+    width:60px !important;
+  }
+  .activeAnton .circle{
+    left: 60px !important;
+  }
+  .textCard{
+    width: min-content !important;
+    text-align: center;
+  }
+}
+@media (min-width: 576px){
+  .SectionKero{
+    max-width: 95% !important;
+  }
+}
+@media (max-width :550px) {
+  .TopCard{
+    flex-direction: column;
     justify-content: center !important;
+    align-items: center !important;
+  }
+  .TopCard .ImageCard{
+    width: 90% !important;
+    margin-bottom: 15px;
+  }
+  .TopCard .textCard{
+    width: 95%;
   }
 }
+
+
+

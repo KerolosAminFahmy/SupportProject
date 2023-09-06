@@ -47,13 +47,3 @@ WeAreBtn.addEventListener('click',()=>{
     VisionContainer.classList.remove("AntonHideLeftSide");
     
 })
-
-
-var ToggleBtn = document.querySelector(".toggle-btn");
-function toggleMenu() {
-  var sideMenu = document.getElementById("sideMenu");            
-  sideMenu.classList.toggle("open");
-  ToggleBtn.classList.toggle("ActiveMenu");
-}
-
-
