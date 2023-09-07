@@ -151,7 +151,11 @@ header .CommitteeSection{
     padding:5px 20px ;
     cursor: pointer;
     background: rgba(27, 27, 27, 0.78);
+    transition: all 0.3s ease-in-out;
   }
+  header .CommitteeSection ul li:hover{
+    background: rgba(78, 78, 78, 0.78);
+}
   header .CommitteeSection ul li p{
     color: #FFF;
     text-align: center;
@@ -510,9 +514,7 @@ section.SectionKero .MarkLine .circle{
   background-color: #1b1b1b;
   color: #fff;
   transition: right 0.3s ease;
-
-  /* box-shadow: 0px 4px 17px 8px rgba(0, 0, 0, 0.69); */
-
+  z-index: 20;
 }
 
 .toggle-btn span{
@@ -550,7 +552,7 @@ section.SectionKero .MarkLine .circle{
   top: 8px;
   right: 10px;
   overflow: hidden;
-  z-index: 1;
+  z-index: 21;
   cursor: pointer;
   background-color: #1b1b1b;
   color: #fff;

@@ -203,7 +203,14 @@ ButtonCommite.addEventListener("click",()=>{
   CommitteeSection.classList.toggle("CommitteeActive")
 
 })
+var CommitteAnton=document.querySelector(".CommitteAnton");
+CommitteAnton.addEventListener("click",()=>{
+  if(window.innerWidth<=993){
 
+    CommitteeSection.classList.toggle("CommitteeActive")
+  }
+
+})
 // menu 
 
 var ToggleBtn = document.querySelector(".toggle-btn");
@@ -211,5 +218,8 @@ function toggleMenu() {
   var sideMenu = document.getElementById("sideMenu");            
   sideMenu.classList.toggle("open");
   ToggleBtn.classList.toggle("ActiveMenu");
+  if(!ToggleBtn.classList.contains("ActiveMenu") && CommitteeSection.classList.contains("CommitteeActive")){
+    CommitteeSection.classList.toggle("CommitteeActive")
+  }
 }
 

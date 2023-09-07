@@ -11,7 +11,7 @@
     margin: 0 15px !important;
   }
 }
-@media (max-width:991px) {
+@media (max-width:992px) {
   .Description{
     border-radius: 0px 0px 13px 13px !important;
     padding-bottom: 35px !important;
@@ -21,6 +21,21 @@
   }
   .Description .button button{
     bottom:15px !important;
+  }
+  header .CommitteeSection{
+    display: flex;
+    right: 250px;
+    width: max-content;
+    top: 60px;
+    height: 96vh;
+    z-index: 19;
+    transform: translateX(245%);
+    justify-content: center;
+    align-items: center;
+  }
+  header .CommitteeSection ul{
+    flex-direction: column;
+    height: 80vh;
   }
 }
 @media (max-width:600px) {
@@ -80,6 +95,17 @@
   }
   .TopCard .textCard{
     width: 95%;
+  }
+}
+@media (max-width:437px){
+  header .CommitteeSection{
+    right:215px;
+  }
+  .side-menu{
+    width: 220px;
+  }
+  header .CommitteeSection ul{
+    padding:6px 6px;
   }
 }
 
