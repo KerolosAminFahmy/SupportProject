@@ -1,0 +1,479 @@
+/*All Element Apply following Style*/
+*{
+  margin:0;
+  padding:0;
+  outline:none;
+  box-sizing: border-box;
+}
+.centerFlex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+a:hover{
+  color:white;
+}
+/*End Element Apply following Style*/
+/* All Style for Text */
+@font-face {
+  font-family: Raleway;
+  src:url('../Assest/Font/Raleway/Raleway-VariableFont_wght.ttf'),
+      url('../Assest/Font/Raleway/Raleway-VariableFont_wght.ttf');
+}
+.TextStyle{
+  text-align: center;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 800;
+  text-transform: capitalize;
+  line-height: 23px;
+}
+/* End Style For Text*/
+/*Start Style main Scrollbar*/
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+	background-color: #3D3D3D;
+}
+
+::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-color: #FFF;
+	background-image: -webkit-gradient(linear,
+									   40% 0%,
+									   75% 84%,
+									   from(black),
+									   to(black),
+									   color-stop(.6,black))
+}
+/*End Style scrollbar*/
+
+/*Start Images Background Style*/
+#backgroundColor{
+  position: fixed;
+  width: 100%;
+  height: 150vh;
+  z-index: -1;
+  top:-30px;
+  background: url('../Images/background.jpg'), lightgray 50% / contain no-repeat; 
+}
+#backgroundWaveTop{
+  background: url('../Images/backgroundWaveTop.png');
+  opacity: 0.7;
+  position: fixed;
+  z-index: 0;
+  top: 57px;
+  right: 0;
+  width: 88%;
+  height: 213vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translate3d(431px,-50px, 0);
+  transition: all 1s ease-in-out;
+}
+#backgroundWaveBottom{
+  opacity: 0.7;
+  position: fixed;
+  z-index: 0;
+  top: 64px;
+  right: 0;
+  width: 100%;
+  height: 93vh;
+  transform: translate(80px, 505px);
+  transition: all 1s ease-in-out;
+}
+#backgroundWaveBottomLeft{
+  opacity: 0.7;
+  position: fixed;
+  z-index: 0;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  height: 93vh;
+  transform: translate(-700px, 182px);
+  transition: all 1s ease-in-out;
+}
+.ActiveBack{
+  transform: translate(0px, 0px) !important;
+}
+/*End Images Background Style*/
+
+
+/*=======> start Style header <==========*/
+header{
+  position: fixed;
+  top:0;
+  width: 100%;
+  z-index: 100;
+  background-color: #1B1B1B;
+  box-shadow: 0px 4px 17px 8px rgba(0, 0, 0, 0.69);
+  transform: translateY(-50px);
+  transition: all 0.8s ease-in-out;
+}
+.ActiveHeader{
+  transform: translateY(-0px);
+
+}
+header nav{
+  width: 95%;
+  margin:0 auto;
+}
+header nav .leftNav .ImageLogo img{
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+/*Start Committee Section style*/
+header .CommitteeSection{
+  width: 100%;
+    position: absolute;
+    bottom:-54px;
+    border-radius: 10px;
+    background: rgba(54, 54, 54, 0.64);
+    box-shadow: 0px 21px 17px -8px rgba(0, 0, 0, 0.69);
+    margin: 0 auto;
+    transform: translateX(100%);
+    transition: all 0.6s ease-in-out;
+  }
+.CommitteeActive{
+  transform: translateX(0) !important;
+}
+header .CommitteeSection ul{
+  width: 90%;
+  margin: 0 auto;
+  padding:8px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .CommitteeSection ul li {
+  text-align: center;
+  width: min-content;
+  border-radius: 5px;
+  padding:5px 20px ;
+  cursor: pointer;
+  background: rgba(27, 27, 27, 0.78);
+  transition: all 0.3s ease-in-out;
+}
+header .CommitteeSection ul li:hover{
+  background: rgba(78, 78, 78, 0.78);
+}
+header .CommitteeSection ul li p{
+  color: #FFF;
+  font-size: 12px;
+  margin: 0;
+}
+/*End  Committee Section style*/
+/* ======>Start Text Animation Style<=========  */
+header nav .leftNav .TextAnimation{
+  width: fit-content;
+  position: relative;
+}
+header nav .leftNav .TextAnimation svg{
+  width: 200px;
+  height: auto;
+}
+header nav .leftNav .TextAnimation .inner{
+  position: absolute;
+  width: 0px;
+  height:auto ;
+  overflow: hidden;
+  animation:text 3.8s 1.3s ease-in-out infinite;
+}
+@keyframes text{
+  0%   {
+    width: 0px;
+  }
+  25%  {
+    width: 199px;
+
+  }
+  50%  {
+    width: 200px;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/* ======>End Text Animation Style<=========  */
+header nav .RightNav ul{
+  margin-bottom: 0px;
+}
+header nav .RightNav ul li{
+  width: fit-content;
+  padding: 5px 10px;
+  margin: 0 40px;
+  transition: all 0.3s linear;
+}
+header nav .RightNav ul li:hover{
+  background-color:#464646;
+  border-radius: 5px;
+}
+.active{
+  color: #F4B719 !important;
+}
+header nav .RightNav ul li a p{
+  margin-bottom: 0px;
+  color: #fff;
+  font-size: 15px;
+}
+
+.SearchBar{
+  position: relative;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.SearchBar input{
+  border-radius: 25px;
+  padding: 5px 12px;
+  padding-right: 24px;
+  width: 0px;
+  opacity: 0;
+  transition: all 0.5s linear;
+}
+.SearchBar .iconSearch{
+  position: absolute;
+  top:1px;
+  right: 0px;
+  text-align: center;
+  background-color: #3D3D3D;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  transition: all 0.1s linear;
+}
+.SearchBar .iconSearch:hover{
+  background-color: #6B6B6B;
+}
+#SearchInput::placeholder{
+  color: rgba(0, 0, 0, 0.38);
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 23px; /* 76.667% */
+  text-transform: capitalize;
+}
+/*=======> End Style header <==========*/
+
+
+/* Start Menu Style */
+
+.side-menu {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  flex-direction: column;
+  top: 10px;
+  right: -280px;
+  width: 250px;
+  height: 99vh;
+  background-color: #1b1b1b;
+  color: #fff;
+  transition: right 0.3s ease;
+  z-index: 20;
+}
+
+.toggle-btn span{
+  transition: all .2s ease-in-out;
+}
+.ActiveMenu span:nth-child(2){
+  transform: translateX(200%);
+}
+
+.ActiveMenu span:nth-child(1){
+  transform: rotate(45deg) translateY(13px);
+}
+.ActiveMenu span:nth-child(3){
+  transform: rotate(-45deg) translateY(-13px);
+}
+.SocialIcons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.SocialIcons li svg{
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+}
+
+.SocialIcons li:hover svg{
+  color: orange;
+}
+.side-menu.open {
+  right: 0;
+}
+
+.toggle-btn {
+  position: fixed;
+  top: 8px;
+  right: 10px;
+  overflow: hidden;
+  z-index: 21;
+  cursor: pointer;
+  background-color: #1b1b1b;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 20px;
+  width: 45px;
+  padding: 12px;
+  height: 45px;
+  border-radius: 5px;
+  display: none;
+
+}
+
+.toggle-btn span {
+  background-color: #fff;
+  height: 3px;
+  width: 100%;
+  display: block;
+}
+.SideMenuList{
+  width: 100%;
+  margin-top: 30%;
+}
+.SideMenuList li a{
+  background-color: #201f1f;
+  /* border-radius: 0; */
+  color: #fff;
+  width: 100%;
+  margin-bottom: 2px;
+  transition: all .2s ease-in-out;
+}
+.SideMenuList li a:hover{
+  background-color: #3e3e3e;
+  color: orange;
+
+}
+
+@media (max-width:993px){
+  .RightNav{
+      display: none !important;
+  }
+  .toggle-btn{
+      display: flex;
+  }
+}
+/*End Menu Style */
+/*Start Login Style */
+.mainLogin{
+  position: fixed;
+  width: 100%;
+  height: 93vh;
+  top: 67px;
+  z-index: 999;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: #00000059;
+  transition: all 0.6s ease-in-out;
+}
+.login{
+  position: relative;
+  display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    height:60vh;
+    overflow: hidden;
+    width: 450px;
+    height: 445px;
+    border-radius: 7px;
+    animation-name: OpacityAnimation;
+    animation-duration: 2s;
+    transition: all 0.5s ease-in-out;
+    background: linear-gradient(150deg, rgba(237, 179, 31, 0.8) 27.33%, rgba(128, 97, 16, 0.35) 51.35%, rgb(0 0 0 / 0%) 77.22%);
+
+}
+.ActiveLoginPage{
+  display: flex;
+}
+.login .backgroundImage{
+  height: 10vh;
+  position: absolute;
+  z-index: 1001;
+  top: -30px;
+  right: -6px;
+}
+.login .ImageLogin{
+  width: 110px;
+  padding-top: 20px;
+}
+.login .ImageLogin img{
+  width:100%;
+  transform: translateY(-200%);
+  transition: all 0.8s ease-in-out;
+
+}
+.ActiveImageLogin{
+  transform: translateY(0) !important;
+} 
+.login .TextLogin p{
+  z-index: 1002;
+  position: relative;
+  top: -20px;
+  font-size: 23px;
+  color: #fff;
+  margin: 0;
+  transform: translateX(-200%);
+  transition: all 0.8s ease-in-out;
+}
+.ActiveTextLogin{
+  transform: translateX(0) !important;
+}
+.login .FormLogin{
+  width: 100%;
+}
+.login .FormLogin form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: -15px;
+  align-items: center;
+}
+.login .FormLogin form input{
+  margin-bottom: 20px;
+  width: 309px;
+    padding: 8px 10px;
+    border-radius: 7px;
+    border: none;
+}
+.login .FormLogin form button{
+  border: none;
+  border-radius:7px;
+  padding:3px 30px;
+  background: #F4B719;
+  box-shadow: 0px 11px 4px 0px rgba(0, 0, 0, 0.24);
+  transition: all 0.6s ease-in-out;
+}
+
+.login .FormLogin form button p{
+  color: #fff;
+  margin:0 ;
+ 
+}
+.login .FormLogin form button:hover{
+  background:#FECE53
+}
+/*End Login Style*/

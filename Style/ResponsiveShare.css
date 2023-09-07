@@ -1,0 +1,45 @@
+@media  (max-width:1290px) {
+  header .CommitteeSection ul{
+    width: 99% !important; 
+  }
+  header nav .RightNav ul li{
+    margin: 0 15px !important;
+  }
+}
+@media (max-width:992px) {
+  header .CommitteeSection{
+    display: flex;
+    right: 250px;
+    width: max-content;
+    top: 60px;
+    height: 96vh;
+    z-index: 19;
+    transform: translateX(245%);
+    justify-content: center;
+    align-items: center;
+  }
+  header .CommitteeSection ul{
+    flex-direction: column;
+    height: 80vh;
+  }
+}
+@media (max-width:437px){
+  header .CommitteeSection{
+    right:215px;
+  }
+  .side-menu{
+    width: 220px;
+  }
+  header .CommitteeSection ul{
+    padding:6px 6px;
+  }
+}
+
+@media (max-width:530px) {
+  .login{
+    width: 340px;
+  }
+  .login .FormLogin form input {
+    width:240px;
+  }
+}

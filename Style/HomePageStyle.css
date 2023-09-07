@@ -1,0 +1,217 @@
+
+/* Start Section Home */
+.SectionKero{
+  position: relative;
+  width: 90%;
+  margin: 140px auto 0;
+  height: 100vh;
+}
+section.SectionKero .ContainerText{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  padding: 0 20px; 
+}
+section.SectionKero .ContainerText .LineBetText{
+  height: 3px;
+  width: 70%;
+  background-color: #F5B819;
+}
+section.SectionKero  .ContainerText .TextChange{
+  position: relative;
+  z-index: 18;
+  color: #FFF;
+  width: fit-content;
+  padding-left: 45px;
+  padding-right: 30px;
+  font-size: 20px;
+  transition: all 0.5s ease-in-out;
+}
+section.SectionKero .ContainerText .ActiveText{
+  color: #F5B819;
+  font-size: 50px;
+}
+section.SectionKero .MarkLine{
+  position: relative;
+  top: -10px;
+  height: inherit;
+  transform: rotateY(0);
+  transition: all 0.5s ease-in-out;
+}
+section.SectionKero .MarkLine.activeAnton{
+  transform: rotateY(180deg) !important;
+  right: -20px;
+}
+section.SectionKero .MarkLine .line{
+  height: inherit;
+  width: 2px;
+  background-color: #F5B819;
+  position: absolute;
+  left: 0;
+  top:0;
+}
+section.SectionKero .MarkLine .smallLine{
+  height: 2px;
+  width: 40px;
+  background-color: #F5B819;
+  position: absolute;
+  left: 0;
+  top:0;
+}
+section.SectionKero .MarkLine .circle{
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  background-color: #F4B719;
+  border-radius: 50%;
+  top: -4px;
+  left: 40px;
+}
+/*End Section Lines and Text */
+/*Start Style card*/
+#News{
+  display: block;
+}
+#Events{
+  display: none;
+}
+.cards{
+  width: inherit;
+  position: absolute;
+  top: 50px;
+  left: 60px;
+}
+.cards .keroCard{
+  margin-bottom: 20px;
+}
+.cards .keroCard .cardChild{
+  border-radius: 10px;
+  background: linear-gradient(319deg, rgba(0, 0, 0, 0.00) 0%, rgba(245, 184, 25, 0.56) 100%);
+  box-shadow: 6px 11px 9px 9px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  padding :20px 10px;
+  overflow: hidden;
+}
+.cards .keroCard .cardChild .TopCard{
+  display: flex;
+  justify-content: space-between;
+}
+.cards .keroCard .cardChild .TopCard .ImageCard{
+  width: 50%;
+}
+.cards .keroCard .cardChild .TopCard .ImageCard img{
+  width: 100%;
+}
+.cards .keroCard .cardChild .TopCard .textCard{
+  width: 45%;
+  max-height: min-content;
+  transition: all 0.5s ease-in-out;
+}
+/* .cards .keroCard .cardChild .TopCard .textCard:hover{
+  max-height: max-content;
+  background-color:  rgba(217, 217, 217, 0.57);
+} */
+
+.cards .keroCard .cardChild .TopCard .textCard p{
+  color: #FFF;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-size: 30px;
+  transition: all 0.5s ease-in-out;
+}
+/* .cards .keroCard .cardChild .TopCard .textCard:hover p{
+  color: #F4B719;
+} */
+.cards .keroCard .cardChild .bottomCard{
+  padding:10px;
+  border-radius: 10px;
+  background: #D9D9D9;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.cards .keroCard .cardChild .bottomCard .headerInfo h3{
+  color: rgba(0, 0, 0, 0.57);
+  font-size: 23px;
+  text-align: left;
+}
+.cards .keroCard .cardChild .bottomCard .button{
+  width: 98%;
+  display: flex;
+  justify-content: flex-end;
+}
+.cards .keroCard .cardChild .bottomCard .button button,
+.Description .button button{
+  background: #000;
+  color: #FFF;
+  font-size: 13px;
+  border-radius: 20px;
+  padding: 0 15px;
+  transition: all 0.5s ease-in-out;
+}
+.cards .keroCard .Description{
+  display: none;
+  position: relative;
+  padding:15px;
+  overflow: hidden;
+  border-radius: 0px 13px 13px 0px;
+  background: rgba(217, 217, 217, 0.60);
+  box-shadow: 15px 11px 9px 9px rgba(0, 0, 0, 0.25);
+  animation-name: OpacityAnimation;
+  animation-duration:2s ;
+  transition:all 2s ease-in-out;
+}
+.cards .keroCard .Description .headerDes h3{
+  color: rgba(0, 0, 0, 0.81);
+  font-size: 20px;
+}
+.cards .keroCard .Description .button button.odd{
+  transform: translateX(-450px);
+}
+.cards .keroCard .Description .button button.even{
+  transform: translateX(108px);
+}
+.cards .keroCard .Description .button button{
+  position: absolute;
+  bottom:30px;
+  right: 20px;
+  transition: all 2s ease-in-out;
+}
+/*Start Animation */
+.ActiveKeroCardRight{
+  border-radius: 13px  0  0 13px !important;
+}
+.activeDecsription{
+  border-radius: 13px 0 0 13px !important;
+}
+.ActiveKeroCardLeft{
+    border-radius: 0 13px 13px 0  !important;
+}
+.ActiveKeroCardBottom{
+  border-bottom-right-radius:0px !important;
+  border-bottom-left-radius:0px !important;
+}
+.ActiveButtonRight{
+  transform: translateX(150px);
+}
+.ActiveButtonLeft{
+  transform: translateX(0px) !important;
+}
+.HideButtonLeft{
+  transform: translateX(-650px);
+}
+.AntonHideLeftSide{
+  opacity: 0;
+}
+@keyframes OpacityAnimation {
+  0%{
+      opacity: 0;
+      
+  }
+  100%{
+      opacity: 1;
+  }
+}
+/*End Animation */
+
+/*End Style card*/
+

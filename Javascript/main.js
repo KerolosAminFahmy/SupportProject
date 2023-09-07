@@ -1,52 +1,6 @@
 
-/*Aimation Search Bar */
-/* All Variable needed */
-var iconButton=document.querySelector(".iconSearch");
-var SearchInput=document.getElementById("SearchInput");
-var isOpen=false;
-var isOpen1=false;
-/* All Variable needed */
-iconButton.addEventListener("click",()=>{
-  SearchInput.style.opacity="1";
-  SearchInput.style.width="250px";
-  iconButton.style.opacity="0";
-  iconButton.style.zIndex = '-1';
-  isOpen=true;
-})
-var counter=0
-SearchInput.addEventListener("mouseout",()=>{
-  if (SearchInput.value.trim() === '' && isOpen1) {
-    counter=0;
-    isOpen1=false;
-    SearchInput.style.opacity="0";
-    SearchInput.style.width="0px";
-    iconButton.style.opacity="1";
-    iconButton.style.zIndex = '1';
-  }else if(counter==1){
-    isOpen1=true;
-  }else{
-    counter++;
-  }
-})
-/* End Aimation Search Bar */
-/* Start Intro Animation  */
-const newsContainer=document.getElementById("News");
-const eventsContainer=document.getElementById("Events");
-const header=document.querySelector("Header");
-const BackgroundWaveTop=document.getElementById("backgroundWaveTop");
-const BackgroundWaveBottom=document.getElementById("backgroundWaveBottom");
-const BackgroundWaveBottomLeft=document.getElementById("backgroundWaveBottomLeft");
-window.onload=()=>{
-  header.classList.add("ActiveHeader");
-  BackgroundWaveTop.classList.add("ActiveBack");
-  BackgroundWaveBottom.classList.add("ActiveBack");
-  BackgroundWaveBottomLeft.classList.add("ActiveBack");
-  newsContainer.style.display="block";
-  eventsContainer.style.display="none";
-  const divHeight = newsContainer.offsetHeight;
-  document.querySelector(".SectionKero").style.height=`${divHeight+30}px`;
-}
-/* End Intro Animation  */
+
+
 /* Start Animation Page (news , event )*/
 const textchanges=document.querySelectorAll(".TextChange");
 const MarkLine=document.querySelector(".MarkLine");
@@ -177,49 +131,8 @@ function updateHeightDiv(){
   document.querySelector(".SectionKero").style.height=`${divHeight+30}px`;
 }
 /* End Resize Section Because Postion Absolute  */
-/* Animation Exit From Page */
-var alllinks = document.querySelectorAll("a");
-alllinks.forEach((item)=>{
-  item.addEventListener("click",(e)=>{
-    e.preventDefault();
-    if(item.getAttribute('href')==''){
-      return;
-    }
-    header.classList.remove("ActiveHeader");
-    BackgroundWaveTop.classList.remove("ActiveBack");
-    BackgroundWaveBottom.classList.remove("ActiveBack");
-    BackgroundWaveBottomLeft.classList.remove("ActiveBack"); 
-    setTimeout(() => {
-      window.location.href = item.getAttribute('href');
-  }, 800);
-  })
-})
-/* End Animation Exit */
 
-/* Display Committe In support */
-var ButtonCommite=document.querySelector(".committee");
-var CommitteeSection=document.querySelector(".CommitteeSection")
-ButtonCommite.addEventListener("click",()=>{
-  CommitteeSection.classList.toggle("CommitteeActive")
 
-})
-var CommitteAnton=document.querySelector(".CommitteAnton");
-CommitteAnton.addEventListener("click",()=>{
-  if(window.innerWidth<=993){
 
-    CommitteeSection.classList.toggle("CommitteeActive")
-  }
 
-})
-// menu 
-
-var ToggleBtn = document.querySelector(".toggle-btn");
-function toggleMenu() {
-  var sideMenu = document.getElementById("sideMenu");            
-  sideMenu.classList.toggle("open");
-  ToggleBtn.classList.toggle("ActiveMenu");
-  if(!ToggleBtn.classList.contains("ActiveMenu") && CommitteeSection.classList.contains("CommitteeActive")){
-    CommitteeSection.classList.toggle("CommitteeActive")
-  }
-}
 
