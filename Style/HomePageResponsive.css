@@ -25,17 +25,16 @@
   section  .ContainerText .TextChange{
     font-size: 15px !important;
     padding-left: 20px !important;
+  }
+  .CustomClass1{
     padding-right: 30px  !important;
   }
   section .ContainerText .ActiveText{
     font-size: 30px !important;
   }
-  .TextChange:nth-child(1){
-    padding:0 0 0 45px !important;
-  } 
-  .TextChange:nth-child(2){
-    padding:0 45px 0 0px !important;
-  } 
+  section .ContainerText{
+    padding-right: 0px !important;
+  }
   .activeAnton {
     right: -45px !important;
   }
@@ -47,10 +46,13 @@
     left: 20px !important ;
   }
   .activeAnton .smallLine{
-    width:60px !important;
+    width:30px !important;
   }
   .activeAnton .circle{
-    left: 60px !important;
+    left: 25px !important;
+  }
+  .CustomClass{
+    padding-right: 5px !important;
   }
   .textCard{
     width: min-content !important;
