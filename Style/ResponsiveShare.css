@@ -9,7 +9,7 @@
 @media (max-width:992px) {
   header .CommitteeSection{
     display: flex;
-    right: 250px;
+    right: -100% !important;
     width: max-content;
     top: 60px;
     height: 96vh;
@@ -25,7 +25,7 @@
 }
 @media (max-width:437px){
   header .CommitteeSection{
-    right:215px;
+    right:-100% !important;
   }
   .side-menu{
     width: 220px;

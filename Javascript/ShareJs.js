@@ -1,3 +1,11 @@
+// Committe in side bar edited
+var CommitteeSideBarBtn = document.querySelector(".CommitteeSideBarBtn");
+var CommitteeSideUl = document.querySelector(".CommitteeSideUl");
+CommitteeSideBarBtn.addEventListener("click" , ()=>{
+  CommitteeSideUl.classList.toggle("CommitteeSideUlToggle");
+  CommitteeSideBarBtn.style.marginBottom="5px";
+})
+
 /* Start Intro Animation  */
 const newsContainer=document.getElementById("News");
 const eventsContainer=document.getElementById("Events");

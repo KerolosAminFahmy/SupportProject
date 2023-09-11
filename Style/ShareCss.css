@@ -138,7 +138,7 @@ header nav .leftNav .ImageLogo img{
 header .CommitteeSection{
   width: 100%;
     position: absolute;
-    bottom:-54px;
+    bottom:-50px;
     border-radius: 10px;
     background: rgba(54, 54, 54, 0.64);
     box-shadow: 0px 21px 17px -8px rgba(0, 0, 0, 0.69);
@@ -149,7 +149,7 @@ header .CommitteeSection{
 .CommitteeActive{
   transform: translateX(0) !important;
 }
-header .CommitteeSection ul{
+header .CommitteeSection ul{  
   width: 90%;
   margin: 0 auto;
   padding:8px 20px;
@@ -159,7 +159,7 @@ header .CommitteeSection ul{
 }
 header .CommitteeSection ul li {
   text-align: center;
-  width: min-content;
+  /* width: min-content; */
   border-radius: 5px;
   padding:5px 20px ;
   cursor: pointer;
@@ -272,6 +272,7 @@ header nav .RightNav ul li a p{
 /* Start Menu Style */
 
 .side-menu {
+  overflow: hidden;
   display: flex;
   justify-content: space-between;
   position: fixed;
@@ -387,6 +388,7 @@ header nav .RightNav ul li a p{
   background-color: #00000059;
   transition: all 0.6s ease-in-out;
 }
+
 .login{
   position: relative;
   display: none;
@@ -477,3 +479,38 @@ header nav .RightNav ul li a p{
   background:#FECE53
 }
 /*End Login Style*/
+.CommitteeSideUl{
+  cursor: pointer;
+  height:0px;
+  overflow: hidden;
+  animation-name: OpacityAnimation;
+  animation-duration: 2s;
+  transition: all 0.5s ease-in-out;
+}
+
+.CommitteeSideUlToggle{
+  height: fit-content;
+  overflow: visible;
+
+}
+
+.MenuTextStyle{
+  transition: all .2s ease-in-out;
+  text-align: center;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 800;
+  text-transform: capitalize;
+  line-height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5px;
+  margin: 4px;
+}
+.CommitteeSideUl li:hover{
+  background-color: #3e3e3e;
+}
+.CommitteeSideUl li:hover .MenuTextStyle{
+  color: #F4B719;
+}
