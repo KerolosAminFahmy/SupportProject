@@ -1,9 +1,17 @@
 // Committe in side bar edited
 var CommitteeSideBarBtn = document.querySelector(".CommitteeSideBarBtn");
 var CommitteeSideUl = document.querySelector(".CommitteeSideUl");
+var allSectionCommite=document.querySelectorAll(".CommitteeSideUl li");
+var Arrow=document.querySelectorAll(".ArrowLine");
 CommitteeSideBarBtn.addEventListener("click" , ()=>{
+  Arrow.forEach((item)=>{
+    item.classList.toggle("ActiveArrowLine");
+  })
   CommitteeSideUl.classList.toggle("CommitteeSideUlToggle");
   CommitteeSideBarBtn.style.marginBottom="5px";
+  allSectionCommite.forEach((item)=>{
+    item.classList.toggle('activeli');
+  })
 })
 
 /* Start Intro Animation  */
@@ -41,7 +49,6 @@ iconButton.addEventListener("click",()=>{
 SearchInput.addEventListener("mouseout",()=>{
   if (SearchInput.value.trim() === '' ) {
     counter=0;
-    isOpen1=false;
     SearchInput.style.opacity="0";
     SearchInput.style.width="0px";
     iconButton.style.opacity="1";
@@ -58,6 +65,9 @@ alllinks.forEach((item)=>{
     if(item.getAttribute('href')==''){
       return;
     }
+    if(ToggleBtn.classList.contains("ActiveMenu")){
+      toggleMenu();
+    }
     header.classList.remove("ActiveHeader");
     BackgroundWaveTop.classList.remove("ActiveBack");
     BackgroundWaveBottom.classList.remove("ActiveBack");
@@ -71,16 +81,10 @@ alllinks.forEach((item)=>{
 /* Display Committe In support */
 var ButtonCommite=document.querySelector(".committee");
 var CommitteeSection=document.querySelector(".CommitteeSection")
+
 ButtonCommite.addEventListener("click",()=>{
+
   CommitteeSection.classList.toggle("CommitteeActive")
-
-})
-var CommitteAnton=document.querySelector(".CommitteAnton");
-CommitteAnton.addEventListener("click",()=>{
-  if(window.innerWidth<=993){
-
-    CommitteeSection.classList.toggle("CommitteeActive")
-  }
 
 })
 /*Finish Display Committe */

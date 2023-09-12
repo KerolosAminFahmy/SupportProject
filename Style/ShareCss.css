@@ -152,7 +152,7 @@ header .CommitteeSection{
 header .CommitteeSection ul{  
   width: 90%;
   margin: 0 auto;
-  padding:8px 20px;
+  padding:8px 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -473,7 +473,7 @@ header nav .RightNav ul li a p{
 .login .FormLogin form button p{
   color: #fff;
   margin:0 ;
- 
+
 }
 .login .FormLogin form button:hover{
   background:#FECE53
@@ -487,13 +487,62 @@ header nav .RightNav ul li a p{
   animation-duration: 2s;
   transition: all 0.5s ease-in-out;
 }
-
 .CommitteeSideUlToggle{
   height: fit-content;
   overflow: visible;
-
 }
-
+ul.CommitteeSideUl li{
+  transform: translateX(100%) rotate(-15deg);
+  background-color: #35363a7a;
+  border-bottom: 1px solid #1b1b1b;
+  transition: transform 0.2s linear;
+}
+ul.CommitteeSideUl li.activeli:nth-child(1){
+  transition-delay: 0;
+  transform: translateX(0);
+}
+ul.CommitteeSideUl li.activeli:nth-child(2){
+  transition-delay: 0.1s;
+  transform: translateX(0);
+}
+ul.CommitteeSideUl li.activeli:nth-child(3){
+  transition-delay: 0.2s;
+  transform: translateX(0);
+}
+ul.CommitteeSideUl li.activeli:nth-child(4){
+  transition-delay: 0.3s;
+  transform: translateX(0);
+}
+ul.CommitteeSideUl li.activeli:nth-child(5){
+  transition-delay: 0.4s;
+  transform: translateX(0);
+}
+ul.CommitteeSideUl li.activeli:nth-child(6){
+  transition-delay: 0.5s;
+  transform: translateX(0);
+}
+ul.CommitteeSideUl li.activeli:nth-child(7){
+  transition-delay: 0.6s;
+  transform: translateX(0);
+}
+ul.CommitteeSideUl li.activeli:nth-child(8){
+  transition-delay: 0.7s;
+  transform: translateX(0);
+}
+ul.CommitteeSideUl li.activeli:nth-child(9){
+  transition-delay: 0.8s;
+  transform: translateX(0);
+}
+ul.CommitteeSideUl li.activeli:nth-child(10){
+  transition-delay: 0.9s;
+  transform: translateX(0);
+}ul.CommitteeSideUl li.activeli:nth-child(11){
+  transition-delay: 1s;
+  transform: translateX(0);
+}
+.activeli{
+  transform: translateX(0);
+}
 .MenuTextStyle{
   transition: all .2s ease-in-out;
   text-align: center;
@@ -513,4 +562,43 @@ header nav .RightNav ul li a p{
 }
 .CommitteeSideUl li:hover .MenuTextStyle{
   color: #F4B719;
+}
+.ContainerArrow{
+  position: relative;
+}
+.ContainerArrow .Arrow{
+  position: absolute;
+  top: 8px;
+  width: 30px;
+  height: 30px;
+  left: 35px;
+}
+.ContainerArrow .Arrow .ArrowLine{
+  position: absolute;
+  width: 2px;
+  height: 10px;
+  background-color: white;
+    top: 7px;
+  border-radius: 7px;
+  transition: all 0.6s ease-in-out;
+}
+.ContainerArrow .Arrow .ArrowLine:nth-child(1){
+  left: 5px;
+  transform: rotateZ(-39deg);
+}
+.ContainerArrow .Arrow .ArrowLine:nth-child(2){
+  left: 10px;
+  transform: rotateZ(39deg);
+}
+.ContainerArrow .Arrow .ArrowLine.ActiveArrowLine:nth-child(1){
+  transform: rotateZ(39deg);
+}
+.ContainerArrow .Arrow .ArrowLine.ActiveArrowLine:nth-child(2){
+  transform: rotateZ(-39deg);
+}
+li:hover .ContainerArrow .Arrow .ArrowLine{
+  background-color:#F4B719 !important ;
+}
+li.list-item a.btn:focus{
+  box-shadow: none;
 }
