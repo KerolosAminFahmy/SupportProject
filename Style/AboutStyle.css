@@ -1,6 +1,7 @@
 .AboutSection{
     z-index: 36;
-    position: absolute;
+    /* position: absolute; */
+    margin-top: 100px;
     width: 100%;
     top: 100px;
     
@@ -191,3 +192,33 @@
         display: flex;
     }
 }
+
+.AntonCards{
+    margin-left: auto;
+    margin-right: auto;
+    transition: all .5s ease-in-out;    
+}
+
+.AntonCardsActive{
+    scale: 0;
+    transform: translateX(-400%) !important;
+}
+.CardsAnimation{
+    scale: 1;    
+}
+
+.TopCard{
+    z-index: 30;
+    
+    transform: translateX(0%)  rotate(15deg)  ;
+}
+.BottomCard{
+    z-index: 28;
+    transform:translateX(0%) rotate(-15deg)  ;
+
+}
+.MidCard{
+    z-index: 29;
+    transform:translateX(0%)  ;
+}
+
