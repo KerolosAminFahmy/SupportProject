@@ -22,14 +22,18 @@ const BackgroundWaveTop=document.getElementById("backgroundWaveTop");
 const BackgroundWaveBottom=document.getElementById("backgroundWaveBottom");
 const BackgroundWaveBottomLeft=document.getElementById("backgroundWaveBottomLeft");
 window.onload=()=>{
-  header.classList.add("ActiveHeader");
-  BackgroundWaveTop.classList.add("ActiveBack");
-  BackgroundWaveBottom.classList.add("ActiveBack");
-  BackgroundWaveBottomLeft.classList.add("ActiveBack");
-  newsContainer.style.display="block";
-  eventsContainer.style.display="none";
-  const divHeight = newsContainer.offsetHeight;
-  document.querySelector(".SectionKero").style.height=`${divHeight+30}px`;
+  setTimeout(()=>{
+    document.querySelector(".LoadingPage").remove();
+    header.classList.add("ActiveHeader");
+    BackgroundWaveTop.classList.add("ActiveBack");
+    BackgroundWaveBottom.classList.add("ActiveBack");
+    BackgroundWaveBottomLeft.classList.add("ActiveBack");
+    newsContainer.style.display="block";
+    eventsContainer.style.display="none";
+    const divHeight = newsContainer.offsetHeight;
+    document.querySelector(".SectionKero").style.height=`${divHeight+30}px`;
+
+  },1000)
 }
 /* End Intro Animation  */
 
