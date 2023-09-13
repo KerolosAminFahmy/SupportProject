@@ -27,15 +27,43 @@ var descriptionContainer = document.querySelector(".description");
 var top = 20;
 var midd = 19;
 var bottom = 18;
+var firstTime=true;
 cards.forEach((item)=>{
     item.addEventListener('click',()=>{
-
+        var Duration=0;
         descriptionContainer.style.display= "block";
         item.classList.add('AntonCardsActive');
-        ImageChange.setAttribute("src" ,"");
-        ImageChange.setAttribute("src" ,item.firstChild.nextSibling.getAttribute("src").toString());
+        if(!firstTime){
+            Duration=550;
+            setTimeout(()=>{
+                descriptionContainer.classList.remove("ActiveSectionDes");
+                descriptionContainer.classList.add("HideSectionDes");
+                
+            },100)
+            setTimeout(()=>{
+                ImageChange.setAttribute("src" ,item.firstChild.nextSibling.getAttribute("src").toString());
+                
+                descriptionContainer.classList.remove("HideSectionDes");
+                descriptionContainer.classList.add("ActiveSectionDes");
+                
+            },600)
             
-        DescriptionText.innerHTML=item.getAttribute("DescriptionTextAttr").toString();
+        }else{
+            ImageChange.setAttribute("src" ,item.firstChild.nextSibling.getAttribute("src").toString());
+                DescriptionText.innerHTML=item.getAttribute("DescriptionTextAttr").toString();
+                firstTime=false;
+        }
+        setTimeout(()=>{
+            DescriptionText.innerHTML='';
+            var Index=0;
+            const Time=setInterval(()=>{
+                DescriptionText.innerHTML+=item.getAttribute("DescriptionTextAttr").toString()[Index];
+                Index++;
+                if(Index==item.getAttribute("DescriptionTextAttr").toString().length){
+                    clearInterval(Time);
+                }
+            },30)
+        },Duration)
         setTimeout(()=>{
             item.classList.remove('AntonCardsActive');
             item.classList.add('CardsAnimation');

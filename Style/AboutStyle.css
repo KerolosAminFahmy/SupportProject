@@ -342,3 +342,12 @@ footer div ul li:hover a svg{
         left: 50px;
     }
 }
+.description{
+    transition: all 0.5s ease-in-out;
+}
+.HideSectionDes{
+    transform: scale(0);
+}
+.ActiveSectionDes{
+    transform: scale(1);
+}
