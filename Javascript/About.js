@@ -29,12 +29,10 @@ var midd = 19;
 var bottom = 18;
 cards.forEach((item)=>{
     item.addEventListener('click',()=>{
-        // alert("clicked");
-        // console.log(item);
+
         descriptionContainer.style.display= "block";
         item.classList.add('AntonCardsActive');
         ImageChange.setAttribute("src" ,"");
-        console.log(item.firstChild.nextSibling);
         ImageChange.setAttribute("src" ,item.firstChild.nextSibling.getAttribute("src").toString());
             
         DescriptionText.innerHTML=item.getAttribute("DescriptionTextAttr").toString();
@@ -59,7 +57,9 @@ cards.forEach((item)=>{
         },500);
 
 
-
+        if(window.innerWidth<=990){
+            DescriptionText.scrollIntoView({ behavior: 'smooth' });
+        }
     })
 })
 
@@ -75,6 +75,5 @@ function editHeightDiv(){
             minheight=ele.offsetHeight;
         }
     })
-    console.log(minheight)
     mainSection.style.height=`${minheight+250}px`;
 }

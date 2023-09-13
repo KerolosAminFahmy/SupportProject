@@ -24,6 +24,12 @@ a:hover{
   src:url('../Assest/Font/Raleway/Raleway-VariableFont_wght.ttf'),
       url('../Assest/Font/Raleway/Raleway-VariableFont_wght.ttf');
 }
+
+@font-face {
+  font-family: Slant;
+  src:url('../Assest/Font/Slant/SLANT.TTF');
+}
+
 .TextStyle{
   text-align: center;
   font-family: 'Raleway';
