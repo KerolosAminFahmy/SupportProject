@@ -34,6 +34,9 @@ window.onload=()=>{
     document.querySelector(".SectionKero").style.height=`${divHeight+30}px`;
 
   },1000)
+
+    editHeightDiv();
+
 }
 /* End Intro Animation  */
 

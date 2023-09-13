@@ -63,3 +63,18 @@ cards.forEach((item)=>{
     })
 })
 
+/* */
+var AllImageCard= document.querySelectorAll('.AntonCards img');
+var mainSection=document.querySelector(".MainSectionCards");
+
+window.addEventListener('resize',editHeightDiv);
+function editHeightDiv(){
+    var minheight=-1000000000;
+    AllImageCard.forEach((ele)=>{
+        if(ele.offsetHeight>=minheight){
+            minheight=ele.offsetHeight;
+        }
+    })
+    console.log(minheight)
+    mainSection.style.height=`${minheight+250}px`;
+}
