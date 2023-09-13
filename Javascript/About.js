@@ -28,61 +28,75 @@ var top = 20;
 var midd = 19;
 var bottom = 18;
 var firstTime=true;
+var FinishAnimaton=true;
 cards.forEach((item)=>{
     item.addEventListener('click',()=>{
-        var Duration=0;
-        descriptionContainer.style.display= "block";
-        item.classList.add('AntonCardsActive');
-        if(!firstTime){
-            Duration=550;
-            setTimeout(()=>{
-                descriptionContainer.classList.remove("ActiveSectionDes");
-                descriptionContainer.classList.add("HideSectionDes");
+        if(FinishAnimaton){
+            cards.forEach((ele)=>{
+                ele.firstChild.nextSibling.style.opacity="0.9";
+                ele.style.cursor="not-allowed";
+            })
+            FinishAnimaton=false;
+            var Duration=0;
+            descriptionContainer.style.display= "block";
+            item.classList.add('AntonCardsActive');
+            if(!firstTime){
+                Duration=550;
+                setTimeout(()=>{
+                    descriptionContainer.classList.remove("ActiveSectionDes");
+                    descriptionContainer.classList.add("HideSectionDes");
+                    
+                },100)
+                setTimeout(()=>{
+                    ImageChange.setAttribute("src" ,item.firstChild.nextSibling.getAttribute("src").toString());
+                    
+                    descriptionContainer.classList.remove("HideSectionDes");
+                    descriptionContainer.classList.add("ActiveSectionDes");
+                    
+                },600)
                 
-            },100)
-            setTimeout(()=>{
+            }else{
                 ImageChange.setAttribute("src" ,item.firstChild.nextSibling.getAttribute("src").toString());
-                
-                descriptionContainer.classList.remove("HideSectionDes");
-                descriptionContainer.classList.add("ActiveSectionDes");
-                
-            },600)
-            
-        }else{
-            ImageChange.setAttribute("src" ,item.firstChild.nextSibling.getAttribute("src").toString());
-                DescriptionText.innerHTML=item.getAttribute("DescriptionTextAttr").toString();
-                firstTime=false;
+                    DescriptionText.innerHTML=item.getAttribute("DescriptionTextAttr").toString();
+                    firstTime=false;
+            }
+            setTimeout(()=>{
+                DescriptionText.innerHTML='';
+                var Index=0;
+                const Time=setInterval(()=>{
+                    DescriptionText.innerHTML+=item.getAttribute("DescriptionTextAttr").toString()[Index];
+                    Index++;
+                    if(Index==item.getAttribute("DescriptionTextAttr").toString().length){
+                        clearInterval(Time);
+                        FinishAnimaton=true;
+                        cards.forEach((ele)=>{
+                            ele.firstChild.nextSibling.style.opacity="1";
+                            ele.style.cursor="pointer";
+                        })
+                    }
+                },30)
+            },Duration)
+            setTimeout(()=>{
+                item.classList.remove('AntonCardsActive');
+                item.classList.add('CardsAnimation');
+                cards.forEach(element => {
+                    item.classList.remove('CardsAnimation');
+                    if(element.classList.contains('TopCard')){
+                        element.classList.remove('TopCard');
+                        element.classList.add('BottomCard');
+                    }
+                    else if(element.classList.contains('MidCard')){
+                        element.classList.add('TopCard');
+                        element.classList.remove('MidCard');
+                    }
+                    else if(element.classList.contains('BottomCard')){
+                        element.classList.add('MidCard');
+                        element.classList.remove('BottomCard');
+                    }
+                });
+            },500);
+
         }
-        setTimeout(()=>{
-            DescriptionText.innerHTML='';
-            var Index=0;
-            const Time=setInterval(()=>{
-                DescriptionText.innerHTML+=item.getAttribute("DescriptionTextAttr").toString()[Index];
-                Index++;
-                if(Index==item.getAttribute("DescriptionTextAttr").toString().length){
-                    clearInterval(Time);
-                }
-            },30)
-        },Duration)
-        setTimeout(()=>{
-            item.classList.remove('AntonCardsActive');
-            item.classList.add('CardsAnimation');
-            cards.forEach(element => {
-                item.classList.remove('CardsAnimation');
-                if(element.classList.contains('TopCard')){
-                    element.classList.remove('TopCard');
-                    element.classList.add('BottomCard');
-                }
-                else if(element.classList.contains('MidCard')){
-                    element.classList.add('TopCard');
-                    element.classList.remove('MidCard');
-                }
-                else if(element.classList.contains('BottomCard')){
-                    element.classList.add('MidCard');
-                    element.classList.remove('BottomCard');
-                }
-            });
-        },500);
 
 
         if(window.innerWidth<=990){
