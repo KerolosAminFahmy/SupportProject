@@ -1,3 +1,7 @@
+document.getElementById("SupportLogo").addEventListener("click", function() {
+  window.location.href = "/index.html";
+});
+
 // Committe in side bar edited
 var CommitteeSideBarBtn = document.querySelector(".CommitteeSideBarBtn");
 var CommitteeSideUl = document.querySelector(".CommitteeSideUl");
