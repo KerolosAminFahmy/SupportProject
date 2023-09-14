@@ -201,6 +201,7 @@
     left: 90px;
     width: 70%;
     background-color: transparent;
+    cursor:pointer;
     border:none;
 }
 
@@ -269,6 +270,34 @@ img{
     animation-name: OpacityAnimation;
     animation-duration: 2s;
 }
+
+.card.AntonCards.centerFlex.TopCard::after {
+    width: 80%;
+    position: absolute;
+    background-color: #00000066;
+    height: 100%;
+    content:  attr(Role-attribute);
+    display: flex;
+    justify-content: center;
+    color: white;
+    align-items: center;
+    border-radius: 20px;
+    transform: translateY(100%);
+    transition: all 0.3s linear;
+    z-index: -1;
+    color: #F5B819;
+    font-family: Raleway;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 23px;
+    text-transform: capitalize;
+}
+.card.AntonCards.centerFlex.TopCard:hover::after {
+    z-index: 100 !important;
+    transform: translateY(0) !important;
+}
+
 footer span{
     font-family: Raleway;
     font-size: 14px;
@@ -350,4 +379,7 @@ footer div ul li:hover a svg{
 }
 .ActiveSectionDes{
     opacity: 1;
+}
+.card.AntonCards.centerFlex.TopCard{
+    overflow: hidden;
 }
