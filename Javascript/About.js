@@ -58,6 +58,10 @@ cards.forEach((item)=>{
                 }
                 
                 setTimeout(()=>{
+                    if(time!=null){
+                        DescriptionText.innerHTML='';
+                        clearInterval(time);
+                    }
                     DescriptionText.innerHTML='';
                     var Index=0;
                         time=setInterval(()=>{
@@ -76,10 +80,7 @@ cards.forEach((item)=>{
                     },30)
                 },Duration)
                 setTimeout(()=>{
-                    if(time!=null){
-                        DescriptionText.innerHTML='';
-                        clearInterval(time);
-                    }
+                    
                     item.classList.remove('AntonCardsActive');
                     item.classList.add('CardsAnimation');
                     cards.forEach(element => {
