@@ -29,14 +29,15 @@ var midd = 19;
 var bottom = 18;
 var firstTime=true;
 var FinishAnimaton=true;
+var DescriptionArray=[];
+cards.forEach(element => {
+    DescriptionArray.push(element.getAttribute("DescriptionTextAttr").toString())
+});
+console.log(DescriptionArray);
 cards.forEach((item)=>{
     item.addEventListener('click',()=>{
-        if(FinishAnimaton){
-            cards.forEach((ele)=>{
-                ele.firstChild.nextSibling.style.opacity="0.9";
-                ele.style.cursor="not-allowed";
-            })
-            FinishAnimaton=false;
+        
+            // FinishAnimaton=false;
             var Duration=0;
             descriptionContainer.style.display= "block";
             item.classList.add('AntonCardsActive');
@@ -60,22 +61,24 @@ cards.forEach((item)=>{
                     DescriptionText.innerHTML=item.getAttribute("DescriptionTextAttr").toString();
                     firstTime=false;
             }
-            setTimeout(()=>{
-                DescriptionText.innerHTML='';
-                var Index=0;
-                const Time=setInterval(()=>{
-                    DescriptionText.innerHTML+=item.getAttribute("DescriptionTextAttr").toString()[Index];
-                    Index++;
-                    if(Index==item.getAttribute("DescriptionTextAttr").toString().length){
-                        clearInterval(Time);
-                        FinishAnimaton=true;
-                        cards.forEach((ele)=>{
-                            ele.firstChild.nextSibling.style.opacity="1";
-                            ele.style.cursor="pointer";
-                        })
-                    }
-                },30)
-            },Duration)
+                
+            DescriptionText.innerHTML=item.getAttribute("DescriptionTextAttr").toString();
+                // setTimeout(()=>{
+                //     DescriptionText.innerHTML='';
+                //     var Index=0;
+                //     const Time=setInterval(()=>{
+                //         DescriptionText.innerHTML+=item.getAttribute("DescriptionTextAttr").toString()[Index];
+                //         Index++;
+                //         if(Index==item.getAttribute("DescriptionTextAttr").toString().length){
+                //             clearInterval(Time);
+                //             FinishAnimaton=true;
+                //             cards.forEach((ele)=>{
+                //                 ele.firstChild.nextSibling.style.opacity="1";
+                //                 ele.style.cursor="pointer";
+                //             })
+                //         }
+                //     },30)
+                // },Duration)
             setTimeout(()=>{
                 item.classList.remove('AntonCardsActive');
                 item.classList.add('CardsAnimation');
@@ -96,7 +99,7 @@ cards.forEach((item)=>{
                 });
             },500);
 
-        }
+        
 
 
         if(window.innerWidth<=990){
@@ -119,3 +122,5 @@ function editHeightDiv(){
     })
     mainSection.style.height=`${minheight+250}px`;
 }
+
+
